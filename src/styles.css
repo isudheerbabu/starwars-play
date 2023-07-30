@@ -1,1 +1,77 @@
-/* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+  *, :after, :before {
+    box-sizing: border-box;
+  }
+
+  html {
+    font-family: 'Noto Sans', sans-serif;
+    color: #ffffff;
+  }
+
+  body {
+    overflow: auto;
+    height:100%;
+    background-color: #000000;
+  }
+  .canvas {
+    width:100%;
+    height: 100%; 
+  }
+  .btn {
+    color: #fff;
+    width: 130px;
+    height: 40px;
+    padding: 10px 25px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+  }
+  .box {
+    color: #fff;
+    width: 260px;
+    height: 120px;
+    padding: 40px 25px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+  }
+  
+  .btn-bar {
+    color: #0bf4f3;
+    box-shadow: 0 0 5px #0bf4f3, 0 0 5px #0bf4f3 inset;
+    border: 1px solid #0bf4f3;
+    z-index: 1;
+  }
+  .btn-bar:after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    box-shadow: 0 0 5px #0bf4f3, 0 0 5px #0bf4f3 inset;
+    transition: all 0.3s ease;
+  }
+  .btn-bar:hover {
+    
+  }
+  .btn-bar:hover:after {
+    top: 0;
+    height: 100%;
+  }
+  .btn-bar:active {
+    top: 2px;
+  }
+  

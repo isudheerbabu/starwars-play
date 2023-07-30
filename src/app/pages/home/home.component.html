@@ -1,0 +1,20 @@
+<div
+  class="flex justify-center items-center flex-wrap mt-20 px-8"
+  *ngIf="allCategories$ | async as categories; else loading"
+>
+  <div class="grid text-center gap-10 lg:grid-cols-3 lg:gap-36 color-primary">
+    <div *ngFor="let category of categories | keyvalue">
+      <a
+        [routerLink]="'/' + category.key"
+        ariaCurrentWhenActive="page"
+        class="font-bold text-2xl transition-all ease-in lg:text-3xl hover:ease-out box btn-bar"
+      >
+        {{ category.key | titlecase }}
+      </a>
+    </div>
+  </div>
+</div>
+
+<ng-template #loading>
+  <app-loading></app-loading>
+</ng-template>

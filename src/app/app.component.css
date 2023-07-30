@@ -1,0 +1,8 @@
+#particles-js {
+    width: 100vw;
+    min-height: 100vh;
+    position: fixed;
+    background-repeat: repeat;
+    background-size: cover;
+    z-index: -1;
+  }

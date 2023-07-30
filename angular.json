@@ -29,7 +29,7 @@
             "styles": [
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": ["node_modules/particles.js/particles.js"]
           },
           "configurations": {
             "production": {
@@ -102,5 +102,8 @@
       }
     }
   },
-  "defaultProject": "starwars-play"
+  "defaultProject": "starwars-play",
+  "cli": {
+    "analytics": false
+  }
 }
